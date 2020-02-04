@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Giant.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Fountain.cpp.obj"
+"D:\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Giant.cpp.obj"
+"D:\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Fountain.gen.cpp.obj"
+"D:\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Giant.init.gen.cpp.obj"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Giant\PCLaunch.rc.res"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"D:\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Giant.lib"
