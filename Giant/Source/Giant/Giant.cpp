@@ -3,4 +3,5 @@
 #include "Giant.h"
 #include "Modules/ModuleManager.h"
 
+DEFINE_LOG_CATEGORY(Giant);
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Giant, "Giant" );
