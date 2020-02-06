@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeGiant_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Giant",
 				PKG_CompiledIn | 0x00000000,
-				0x1B1890B8,
-				0x9C4C0030,
+				0xD0A56C3D,
+				0xE9598518,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

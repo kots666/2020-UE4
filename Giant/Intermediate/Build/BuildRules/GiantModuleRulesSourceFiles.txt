@@ -1,3 +1,3 @@
-C:\Users\Admin\Desktop\Giant\Source\Giant\Giant.Build.cs
-C:\Users\Admin\Desktop\Giant\Source\Giant.Target.cs
-C:\Users\Admin\Desktop\Giant\Source\GiantEditor.Target.cs
+C:\Users\KK\Desktop\UE4CPP\Giant\Source\Giant\Giant.Build.cs
+C:\Users\KK\Desktop\UE4CPP\Giant\Source\Giant.Target.cs
+C:\Users\KK\Desktop\UE4CPP\Giant\Source\GiantEditor.Target.cs

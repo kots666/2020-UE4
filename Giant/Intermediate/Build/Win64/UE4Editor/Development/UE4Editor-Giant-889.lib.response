@@ -1,0 +1,22 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Giant-889.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\CharacterAnimInstance.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Giant.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\GiantGameMode.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\GiantPlayerController.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\MyCharacter.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\CharacterAnimInstance.gen.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Giant.init.gen.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\GiantGameMode.gen.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\GiantPlayerController.gen.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\MyCharacter.gen.cpp.obj"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Giant\PCLaunch.rc.res"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Giant-889.lib"

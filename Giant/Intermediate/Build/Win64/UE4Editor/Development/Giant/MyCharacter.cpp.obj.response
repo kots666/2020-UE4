@@ -24,9 +24,9 @@
 /wd4838
 /w44668
 /I "D:\Program Files\Epic Games\UE_4.19\Engine\Source"
-/I C:\Users\Admin\Desktop\Giant\Source
-/I C:\Users\Admin\Desktop\Giant\Intermediate\Build\Win64\UE4Editor\Inc\Giant
-/I C:\Users\Admin\Desktop\Giant\Source\Giant
+/I C:\Users\KK\Desktop\UE4CPP\Giant\Source
+/I C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Inc\Giant
+/I C:\Users\KK\Desktop\UE4CPP\Giant\Source\Giant
 /I "D:\Program Files\Epic Games\UE_4.19\Engine\Source\Runtime\Core\Public"
 /I "D:\Program Files\Epic Games\UE_4.19\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "D:\Program Files\Epic Games\UE_4.19\Engine\Source\Runtime\Core\Public\Async"
@@ -364,9 +364,9 @@
 /FI"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\Admin\Desktop\Giant\Source\Giant\MyCharacter.cpp"
-/FI"C:\Users\Admin\Desktop\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Definitions.Giant.h"
-/Fo"C:\Users\Admin\Desktop\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\MyCharacter.cpp.obj"
+"C:\Users\KK\Desktop\UE4CPP\Giant\Source\Giant\MyCharacter.cpp"
+/FI"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\Definitions.Giant.h"
+/Fo"C:\Users\KK\Desktop\UE4CPP\Giant\Intermediate\Build\Win64\UE4Editor\Development\Giant\MyCharacter.cpp.obj"
 /TP
 /GR-
 /W4
