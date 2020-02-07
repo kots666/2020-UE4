@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyCharacter.h"
+#include "CharacterAnimInstance.h"
 
 
 // Sets default values
@@ -8,11 +9,23 @@ AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	// members Init
 	Sword = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SWORD"));
 	SwordCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SWORDCOLLISION"));
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
+	
+	GetCapsuleComponent()->SetCapsuleHalfHeight(110.0f);
+	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -110.0f), FRotator(0.0f, -90.0f, 0.0f));
+	GetCharacterMovement()->MaxWalkSpeed = 800.0f;
+	GetCharacterMovement()->JumpZVelocity = 650.0f;
 
+	IsAttacking = false;
+	MaxCombo = 3;
+	AttackEndComboState();
+
+	// Attach Components & Init
 	Sword->SetupAttachment(GetMesh(), TEXT("RightHandSocket"));
 	Sword->SetRelativeLocation(FVector(0.0f, 0.0f, -30.0f));
 
@@ -22,15 +35,12 @@ AMyCharacter::AMyCharacter()
 	SwordCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	SwordCollision->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
 
+	// Camera Settings
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
-
-	GetCapsuleComponent()->SetCapsuleHalfHeight(110.0f);
-	
-	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -110.0f), FRotator(0.0f, -90.0f, 0.0f));
-
 	SetControlMode(0);
-	
+
+	// Adapts
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SK_MYSWORD(TEXT("/Game/Meshes/Sword.Sword"));
 	if (SK_MYSWORD.Succeeded())
 	{
@@ -52,8 +62,6 @@ AMyCharacter::AMyCharacter()
 		GetMesh()->SetAnimInstanceClass(MYCHARACTER_ANIM.Class);
 	}
 
-	GetCharacterMovement()->MaxWalkSpeed = 800.0f;
-	GetCharacterMovement()->JumpZVelocity = 650.0f;
 }
 
 // Called when the game starts or when spawned
@@ -88,10 +96,32 @@ void AMyCharacter::Tick(float DeltaTime)
 
 }
 
+void AMyCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	CharacterAnim = Cast<UCharacterAnimInstance>(GetMesh()->GetAnimInstance());
+	GTCHECK(nullptr != CharacterAnim);
+
+	CharacterAnim->OnMontageEnded.AddDynamic(this, &AMyCharacter::OnAttackMontageEnded);
+
+	CharacterAnim->OnNextAttack.AddLambda([this]() -> void
+	{
+		GTLOG(Warning, TEXT("OnNextAttack"));
+		CanNextCombo = false;
+		if (IsComboInputOn)
+		{
+			AttackStartComoboState();
+			//UE_LOG(LogTemp, Log, TEXT("Current Combo :: %d"), CurrentCombo);
+			CharacterAnim->JumpToAttackMontageSection(CurrentCombo);
+		}
+	});
+}
+
 // Called to bind functionality to input
 void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AMyCharacter::Attack);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &AMyCharacter::Jump);
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &AMyCharacter::UpDown);
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AMyCharacter::LeftRight);
@@ -121,3 +151,46 @@ void AMyCharacter::Turn(float NewAxisValue)
 	AddControllerYawInput(NewAxisValue);
 }
 
+void AMyCharacter::Attack()
+{
+	if (IsAttacking)
+	{
+		GTCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 1, MaxCombo));
+		if (CanNextCombo)
+		{
+			//UE_LOG(LogTemp, Log, TEXT("ComboInputOn"));
+			IsComboInputOn = true;
+		}
+	}
+	else
+	{
+		GTCHECK(CurrentCombo == 0);
+		AttackStartComoboState();
+		CharacterAnim->PlayAttackMontage();
+		CharacterAnim->JumpToAttackMontageSection(CurrentCombo);
+		IsAttacking = true;
+	}
+}
+
+void AMyCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupted)
+{
+	GTCHECK(IsAttacking);
+	GTCHECK(CurrentCombo > 0);
+	IsAttacking = false;
+	AttackEndComboState();
+}
+
+void AMyCharacter::AttackStartComoboState()
+{
+	CanNextCombo = true;
+	IsComboInputOn = false;
+	GTCHECK(FMath::IsWithinInclusive(CurrentCombo, 0, MaxCombo - 1));
+	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
+}
+
+void AMyCharacter::AttackEndComboState()
+{
+	IsComboInputOn = false;
+	CanNextCombo = false;
+	CurrentCombo = 0;
+}

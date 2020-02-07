@@ -8,13 +8,38 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef GIANT_MyCharacter_generated_h
 #error "MyCharacter.generated.h already included, missing '#pragma once' in MyCharacter.h"
 #endif
 #define GIANT_MyCharacter_generated_h
 
-#define Giant_Source_Giant_MyCharacter_h_12_RPC_WRAPPERS
-#define Giant_Source_Giant_MyCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Giant_Source_Giant_MyCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded) \
+	{ \
+		P_GET_OBJECT(UAnimMontage,Z_Param_Montage); \
+		P_GET_UBOOL(Z_Param_bInterrupted); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnAttackMontageEnded(Z_Param_Montage,Z_Param_bInterrupted); \
+		P_NATIVE_END; \
+	}
+
+
+#define Giant_Source_Giant_MyCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded) \
+	{ \
+		P_GET_OBJECT(UAnimMontage,Z_Param_Montage); \
+		P_GET_UBOOL(Z_Param_bInterrupted); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnAttackMontageEnded(Z_Param_Montage,Z_Param_bInterrupted); \
+		P_NATIVE_END; \
+	}
+
+
 #define Giant_Source_Giant_MyCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyCharacter(); \
@@ -59,7 +84,15 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyCharacter)
 
 
-#define Giant_Source_Giant_MyCharacter_h_12_PRIVATE_PROPERTY_OFFSET
+#define Giant_Source_Giant_MyCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__IsAttacking() { return STRUCT_OFFSET(AMyCharacter, IsAttacking); } \
+	FORCEINLINE static uint32 __PPO__CanNextCombo() { return STRUCT_OFFSET(AMyCharacter, CanNextCombo); } \
+	FORCEINLINE static uint32 __PPO__IsComboInputOn() { return STRUCT_OFFSET(AMyCharacter, IsComboInputOn); } \
+	FORCEINLINE static uint32 __PPO__CurrentCombo() { return STRUCT_OFFSET(AMyCharacter, CurrentCombo); } \
+	FORCEINLINE static uint32 __PPO__MaxCombo() { return STRUCT_OFFSET(AMyCharacter, MaxCombo); } \
+	FORCEINLINE static uint32 __PPO__CharacterAnim() { return STRUCT_OFFSET(AMyCharacter, CharacterAnim); }
+
+
 #define Giant_Source_Giant_MyCharacter_h_9_PROLOG
 #define Giant_Source_Giant_MyCharacter_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
