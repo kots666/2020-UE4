@@ -42,13 +42,13 @@ void UCharacterAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 
 void UCharacterAnimInstance::AnimNotify_AttackStart()
 {
-	//UE_LOG(LogTemp, Log, TEXT("AttackStart"));
+	UE_LOG(LogTemp, Log, TEXT("AttackStart"));
 	OnAttackStart.Broadcast();
 }
 
 void UCharacterAnimInstance::AnimNotify_AttackEnd()
 {
-	//UE_LOG(LogTemp, Log, TEXT("AttackEnd"));
+	UE_LOG(LogTemp, Log, TEXT("AttackEnd"));
 	OnAttackEnd.Broadcast();
 }
 

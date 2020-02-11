@@ -1,70 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\Giant.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{424647B0-E1B8-46B3-876F-0A795A3AF33A}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Giant.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\GiantEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{3140BC0C-B0CE-4C69-9D75-83191C7099B6}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultInput.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Source\Giant">
-      <UniqueIdentifier>{A68AA458-D95D-48B0-A6D2-369394008125}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Giant\Giant.Build.cs">
-      <Filter>Source\Giant</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\Giant\Giant.cpp">
-      <Filter>Source\Giant</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Giant\Giant.h">
-      <Filter>Source\Giant</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Giant\GiantGameMode.cpp">
-      <Filter>Source\Giant</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Giant\GiantGameMode.h">
-      <Filter>Source\Giant</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Giant\GiantPlayerController.cpp">
-      <Filter>Source\Giant</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Giant\GiantPlayerController.h">
-      <Filter>Source\Giant</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Giant\MyCharacter.cpp">
-      <Filter>Source\Giant</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Giant\MyCharacter.h">
-      <Filter>Source\Giant</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Giant\CharacterAnimInstance.h">
-      <Filter>Source\Giant</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Giant\CharacterAnimInstance.cpp">
-      <Filter>Source\Giant</Filter>
-    </ClCompile>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\Giant.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{1F9E03A2-23E8-4262-95EA-27421AF3A028}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Giant.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GiantEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{C29CD663-C2CB-4F5B-B558-07D996641141}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Giant">
+			<UniqueIdentifier>{E1A9AC58-440C-4DC9-A34F-4B620C57F15B}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\Giant\CharacterAnimInstance.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\CharacterAnimInstance.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\Giant\Giant.Build.cs">
+			<Filter>Source\Giant</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Giant\Giant.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\Giant.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Giant\GiantGameMode.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\GiantGameMode.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Giant\GiantPlayerController.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\GiantPlayerController.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Giant\MyCharacter.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\MyCharacter.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+	</ItemGroup>
 </Project>

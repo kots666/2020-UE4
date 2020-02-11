@@ -21,17 +21,23 @@ AMyCharacter::AMyCharacter()
 	GetCharacterMovement()->MaxWalkSpeed = 800.0f;
 	GetCharacterMovement()->JumpZVelocity = 650.0f;
 
+	// Combo Attack
 	IsAttacking = false;
 	MaxCombo = 3;
 	AttackEndComboState();
+	
+
+	// Capsule Collision Settings
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("MyCharacter"));
 
 	// Attach Components & Init
 	Sword->SetupAttachment(GetMesh(), TEXT("RightHandSocket"));
 	Sword->SetRelativeLocation(FVector(0.0f, 0.0f, -30.0f));
-
+	
 	SwordCollision->SetupAttachment(Sword);
 	SwordCollision->SetRelativeLocation(FVector(0.0f, 0.0f, 75.0f));
-	SwordCollision->SetRelativeScale3D(FVector(2.25f, 2.0f, 3.0f));
+	SwordCollision->SetRelativeScale3D(FVector(1.0f, 1.0f, 2.0f));
+	SwordCollision->SetCollisionProfileName(TEXT("MyCharacter"));
 	SwordCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	SwordCollision->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
 
@@ -40,7 +46,7 @@ AMyCharacter::AMyCharacter()
 	Camera->SetupAttachment(SpringArm);
 	SetControlMode(0);
 
-	// Adapts
+	// Adapts Castings
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SK_MYSWORD(TEXT("/Game/Meshes/Sword.Sword"));
 	if (SK_MYSWORD.Succeeded())
 	{
@@ -99,11 +105,18 @@ void AMyCharacter::Tick(float DeltaTime)
 void AMyCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
+
 	CharacterAnim = Cast<UCharacterAnimInstance>(GetMesh()->GetAnimInstance());
 	GTCHECK(nullptr != CharacterAnim);
 
 	CharacterAnim->OnMontageEnded.AddDynamic(this, &AMyCharacter::OnAttackMontageEnded);
 
+	
+	SwordCollision->OnComponentBeginOverlap.AddDynamic(this, &AMyCharacter::OnAttackOverlapBegin);
+
+
+	CharacterAnim->OnAttackStart.AddLambda([this]() -> void { OnAttackStart(); });
+	CharacterAnim->OnAttackEnd.AddLambda([this]() -> void { OnAttackEnd(); });
 	CharacterAnim->OnNextAttack.AddLambda([this]() -> void
 	{
 		GTLOG(Warning, TEXT("OnNextAttack"));
@@ -178,6 +191,28 @@ void AMyCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterrupte
 	GTCHECK(CurrentCombo > 0);
 	IsAttacking = false;
 	AttackEndComboState();
+}
+
+void AMyCharacter::OnAttackOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if ((nullptr != OtherActor) && (this != OtherActor) && (nullptr != OtherComp))
+	{
+		FDamageEvent DamageEvent;
+		OtherActor->TakeDamage(10.0f, DamageEvent, GetController(), this);
+		UE_LOG(LogTemp, Log, TEXT("%s"), *OtherActor->GetName());
+	}
+}
+
+void AMyCharacter::OnAttackStart()
+{
+	UE_LOG(LogTemp, Log, TEXT("Collision is QueryOnly"));
+	SwordCollision->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+}
+
+void AMyCharacter::OnAttackEnd()
+{
+	UE_LOG(LogTemp, Log, TEXT("Collision is NoCollision"));
+	SwordCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 void AMyCharacter::AttackStartComoboState()
