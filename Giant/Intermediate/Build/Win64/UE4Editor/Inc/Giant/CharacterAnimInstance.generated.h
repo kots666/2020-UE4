@@ -114,6 +114,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCharacterAnimInstance); \
 #define Giant_Source_Giant_CharacterAnimInstance_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CurrentPawnSpeed() { return STRUCT_OFFSET(UCharacterAnimInstance, CurrentPawnSpeed); } \
 	FORCEINLINE static uint32 __PPO__IsInAir() { return STRUCT_OFFSET(UCharacterAnimInstance, IsInAir); } \
+	FORCEINLINE static uint32 __PPO__IsDead() { return STRUCT_OFFSET(UCharacterAnimInstance, IsDead); } \
 	FORCEINLINE static uint32 __PPO__AttackMontage() { return STRUCT_OFFSET(UCharacterAnimInstance, AttackMontage); }
 
 

@@ -6,6 +6,7 @@ UCharacterAnimInstance::UCharacterAnimInstance()
 {
 	CurrentPawnSpeed = 0.0f;
 	IsInAir = false;
+	IsDead = false;
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/Montages/SK_Character_Montage.SK_Character_Montage"));
 	if (ATTACK_MONTAGE.Succeeded())
 	{
@@ -18,7 +19,9 @@ void UCharacterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
 	auto Pawn = TryGetPawnOwner();
-	if (IsValid(Pawn))
+
+	if (!::IsValid(Pawn)) return;
+	if (!IsDead)
 	{
 		CurrentPawnSpeed = Pawn->GetVelocity().Size2D();
 		auto Character = Cast<ACharacter>(Pawn);
@@ -31,13 +34,19 @@ void UCharacterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 void UCharacterAnimInstance::PlayAttackMontage()
 {
+	GTCHECK(!IsDead);
 	Montage_Play(AttackMontage, 1.0f);
 }
 
 void UCharacterAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 {
-	//GTCHECK(Montage_IsPlaying(AttackMontage));
+	GTCHECK(!IsDead);
 	Montage_JumpToSection(GetAttackMontaeSectionName(NewSection), AttackMontage);
+}
+
+void UCharacterAnimInstance::SetDead()
+{
+	IsDead = true;
 }
 
 void UCharacterAnimInstance::AnimNotify_AttackStart()

@@ -2,6 +2,7 @@
 
 #include "MyCharacter.h"
 #include "CharacterAnimInstance.h"
+#include "MyCharacterStatComponent.h"
 
 
 // Sets default values
@@ -13,6 +14,7 @@ AMyCharacter::AMyCharacter()
 	// members Init
 	Sword = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SWORD"));
 	SwordCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SWORDCOLLISION"));
+	CharacterStat = CreateDefaultSubobject<UMyCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
 	
@@ -128,6 +130,19 @@ void AMyCharacter::PostInitializeComponents()
 			CharacterAnim->JumpToAttackMontageSection(CurrentCombo);
 		}
 	});
+	CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
+		CharacterAnim->SetDead();
+		SetActorEnableCollision(false);
+	});
+}
+
+float AMyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	
+	CharacterStat->UnderAttacked(FinalDamage);
+
+	return FinalDamage;
 }
 
 // Called to bind functionality to input
@@ -198,7 +213,8 @@ void AMyCharacter::OnAttackOverlapBegin(UPrimitiveComponent* OverlappedComp, AAc
 	if ((nullptr != OtherActor) && (this != OtherActor) && (nullptr != OtherComp))
 	{
 		FDamageEvent DamageEvent;
-		OtherActor->TakeDamage(10.0f, DamageEvent, GetController(), this);
+		
+		OtherActor->TakeDamage(CharacterStat->GetATK(), DamageEvent, GetController(), this);
 		UE_LOG(LogTemp, Log, TEXT("%s"), *OtherActor->GetName());
 	}
 }

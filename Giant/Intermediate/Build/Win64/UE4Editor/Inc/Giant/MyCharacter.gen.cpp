@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 	GIANT_API UClass* Z_Construct_UClass_UCharacterAnimInstance_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	GIANT_API UClass* Z_Construct_UClass_UMyCharacterStatComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
@@ -209,6 +210,14 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpringArm = { UE4CodeGen_Private::EPropertyClass::Object, "SpringArm", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000a0009, 1, nullptr, STRUCT_OFFSET(AMyCharacter, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_SpringArm_MetaData, ARRAY_COUNT(NewProp_SpringArm_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharacterStat_MetaData[] = {
+				{ "Category", "Stat" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "MyCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CharacterStat = { UE4CodeGen_Private::EPropertyClass::Object, "CharacterStat", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000a0009, 1, nullptr, STRUCT_OFFSET(AMyCharacter, CharacterStat), Z_Construct_UClass_UMyCharacterStatComponent_NoRegister, METADATA_PARAMS(NewProp_CharacterStat_MetaData, ARRAY_COUNT(NewProp_CharacterStat_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SwordCollision_MetaData[] = {
 				{ "Category", "Sword" },
 				{ "EditInline", "true" },
@@ -234,6 +243,7 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_IsAttacking,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Camera,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpringArm,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CharacterStat,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SwordCollision,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Sword,
 			};
@@ -255,7 +265,7 @@ void EmptyLinkFunctionForGeneratedCodeMyCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyCharacter, 3904911849);
+	IMPLEMENT_CLASS(AMyCharacter, 3388171738);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AMyCharacter(Z_Construct_UClass_AMyCharacter, &AMyCharacter::StaticClass, TEXT("/Script/Giant"), TEXT("AMyCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMyCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
