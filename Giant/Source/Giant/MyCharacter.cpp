@@ -3,6 +3,7 @@
 #include "MyCharacter.h"
 #include "CharacterAnimInstance.h"
 #include "MyCharacterStatComponent.h"
+#include "MyAIController.h"
 
 
 // Sets default values
@@ -22,6 +23,10 @@ AMyCharacter::AMyCharacter()
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -110.0f), FRotator(0.0f, -90.0f, 0.0f));
 	GetCharacterMovement()->MaxWalkSpeed = 800.0f;
 	GetCharacterMovement()->JumpZVelocity = 650.0f;
+
+	//AI
+	AIControllerClass = AMyAIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
 	// Combo Attack
 	IsAttacking = false;
