@@ -3,91 +3,91 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<Filter Include="Source">
-			<UniqueIdentifier>{A8DD17D0-01CD-48DC-B0F8-7382EBAE9C91}</UniqueIdentifier>
+			<UniqueIdentifier>{B6B5C156-F08E-46AC-A48B-9931A32F3BB8}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\StudioEditor.Target.cs">
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Source\Developer">
-			<UniqueIdentifier>{564AF4D2-B653-4FAB-B8F0-445575994C46}</UniqueIdentifier>
+			<UniqueIdentifier>{CC2C0AAC-C204-4336-B93C-BC2BA51F9E6B}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\Developer\Datasmith">
-			<UniqueIdentifier>{44DA1BC1-6641-4CCC-85DF-1EFA9B8256DB}</UniqueIdentifier>
+			<UniqueIdentifier>{4A449E0B-7825-4A58-954F-1C200AE636BB}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\Developer\Datasmith\DatasmithCore">
-			<UniqueIdentifier>{2FE7B997-1884-4944-A4BD-4172A10DBE86}</UniqueIdentifier>
+			<UniqueIdentifier>{7FA8BB90-A8A4-4359-B4F2-84087AEE6509}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\Developer\Datasmith\DatasmithCore\DatasmithCore.Build.cs">
 			<Filter>Source\Developer\Datasmith\DatasmithCore</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{3C8BD585-BA99-4C0D-8A67-3F6F6B124F24}</UniqueIdentifier>
+			<UniqueIdentifier>{1FB8F3F6-0A70-4A6E-9D6D-34F647CF1380}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Editor">
-			<UniqueIdentifier>{EF67FE52-A3DE-47EA-895D-CDB5D4149051}</UniqueIdentifier>
+			<UniqueIdentifier>{88231DA4-038C-4BE4-BA51-CA29D59DECE7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Editor\DatasmithCADImporter">
-			<UniqueIdentifier>{285C55B4-0D05-4144-89D9-0D29736F9559}</UniqueIdentifier>
+			<UniqueIdentifier>{1C2F3BD7-A954-445A-AE0E-E12322E7E435}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithCADImporter\DatasmithCADImporter.uplugin">
 			<Filter>Plugins\Editor\DatasmithCADImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithCADImporter\Resources">
-			<UniqueIdentifier>{29C638B9-A3F7-40AD-8158-7D0CDB626663}</UniqueIdentifier>
+			<UniqueIdentifier>{A1BE7C5C-868E-441F-982B-9AF11802EF76}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithCADImporter\Resources\Icon128.png">
 			<Filter>Plugins\Editor\DatasmithCADImporter\Resources</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithDeltaGenImporter">
-			<UniqueIdentifier>{B68AE7EC-2592-4CF8-B373-F199375C6094}</UniqueIdentifier>
+			<UniqueIdentifier>{6E4196FD-57FA-4684-888F-5738B2093B00}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithDeltaGenImporter\DatasmithDeltaGenImporter.uplugin">
 			<Filter>Plugins\Editor\DatasmithDeltaGenImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithDeltaGenImporter\Resources">
-			<UniqueIdentifier>{2001B43E-361A-4B44-B3B2-85ECA96593BF}</UniqueIdentifier>
+			<UniqueIdentifier>{F4CF2E28-3936-40F9-84C7-7A92B6CEA0E0}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithDeltaGenImporter\Resources\Icon128.png">
 			<Filter>Plugins\Editor\DatasmithDeltaGenImporter\Resources</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithImporter">
-			<UniqueIdentifier>{24937FBF-3649-456F-91EF-A2DDA8265193}</UniqueIdentifier>
+			<UniqueIdentifier>{959E5ACE-2527-40A4-A291-EF8F499D8C53}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithImporter\DatasmithImporter.uplugin">
 			<Filter>Plugins\Editor\DatasmithImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithImporter\Resources">
-			<UniqueIdentifier>{2564B5DD-70D9-4A08-B3B2-0259A97A33AB}</UniqueIdentifier>
+			<UniqueIdentifier>{590C6274-0738-4B74-80A4-DFB45A566A71}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithImporter\Resources\Icon128.png">
 			<Filter>Plugins\Editor\DatasmithImporter\Resources</Filter>
 		</None >
 		<Filter Include="Plugins\Experimental">
-			<UniqueIdentifier>{80999358-A988-4B38-A394-878A43FD64AC}</UniqueIdentifier>
+			<UniqueIdentifier>{12260540-C749-40CE-ABDD-DFC29314500D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Experimental\EditorScriptingUtilities">
-			<UniqueIdentifier>{E0BDF6BE-8045-4C99-A19F-C6BA00696D65}</UniqueIdentifier>
+			<UniqueIdentifier>{B7034311-11C1-4241-B7BE-56348AF55466}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Experimental\EditorScriptingUtilities\EditorScriptingUtilities.uplugin">
 			<Filter>Plugins\Experimental\EditorScriptingUtilities</Filter>
 		</None >
 		<Filter Include="Plugins\Experimental\EditorScriptingUtilities\Resources">
-			<UniqueIdentifier>{1D4BF64A-DB99-4695-9234-0205D0BF4FF3}</UniqueIdentifier>
+			<UniqueIdentifier>{C6F0D556-CB1C-43F0-A82A-F410ABAC75DC}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Experimental\EditorScriptingUtilities\Resources\Icon128.png">
 			<Filter>Plugins\Experimental\EditorScriptingUtilities\Resources</Filter>
 		</None >
 		<Filter Include="Source\Developer\Datasmith\DatasmithExporter">
-			<UniqueIdentifier>{C02799AD-C344-4B5E-9BB5-266ABC01F097}</UniqueIdentifier>
+			<UniqueIdentifier>{90569AE2-B245-4A42-AD67-88AD22F5E3A3}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\Developer\Datasmith\DatasmithExporter\DatasmithExporter.Build.cs">
 			<Filter>Source\Developer\Datasmith\DatasmithExporter</Filter>
 		</None >
 		<Filter Include="Source\ThirdParty">
-			<UniqueIdentifier>{6D4EABF8-E22C-4DD5-9B34-0EF8059CB06A}</UniqueIdentifier>
+			<UniqueIdentifier>{22A8A709-A4B6-4471-83A0-6150430774DC}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\ThirdParty\FreeImage">
-			<UniqueIdentifier>{A6F88EC6-5D31-48A5-A7A2-1FA4FC787BAE}</UniqueIdentifier>
+			<UniqueIdentifier>{9CE55497-0A7B-4DDB-8B3E-9981539DFC08}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\ThirdParty\FreeImage\FreeImage.Build.cs">
 			<Filter>Source\ThirdParty\FreeImage</Filter>
@@ -123,13 +123,13 @@
 			<Filter>Source\ThirdParty\FreeImage</Filter>
 		</None >
 		<Filter Include="Source\ThirdParty\FreeImage\Source">
-			<UniqueIdentifier>{0E6A91C1-FE40-483C-A9B4-2F9FD76C42F5}</UniqueIdentifier>
+			<UniqueIdentifier>{71EEF427-2CF4-4E27-A96B-6BA8CA93A8EA}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\ThirdParty\FreeImage\Source\FreeImage.h">
 			<Filter>Source\ThirdParty\FreeImage\Source</Filter>
 		</ClInclude >
 		<Filter Include="Source\ThirdParty\FreeImage\x64">
-			<UniqueIdentifier>{838E9B9B-F16C-4A86-81C6-C558C1BEB57D}</UniqueIdentifier>
+			<UniqueIdentifier>{66C4F0FD-1E6E-4F60-92A1-FEC2C4C0F2A8}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\ThirdParty\FreeImage\x64\FreeImage317.dll">
 			<Filter>Source\ThirdParty\FreeImage\x64</Filter>
@@ -141,7 +141,7 @@
 			<Filter>Source\ThirdParty\FreeImage\x64</Filter>
 		</None >
 		<Filter Include="Source\ThirdParty\GPureSDK">
-			<UniqueIdentifier>{DEFEBE1A-04B9-4128-B32C-E114041DB2CC}</UniqueIdentifier>
+			<UniqueIdentifier>{F9604148-676E-43BB-A52F-C478B6467243}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\ThirdParty\GPureSDK\GPureSDK.Build.cs">
 			<Filter>Source\ThirdParty\GPureSDK</Filter>
@@ -150,7 +150,7 @@
 			<Filter>Source\ThirdParty\GPureSDK</Filter>
 		</None >
 		<Filter Include="Source\ThirdParty\Itoo">
-			<UniqueIdentifier>{4CFC0083-5176-42AC-8B33-2B40745C2C79}</UniqueIdentifier>
+			<UniqueIdentifier>{52D7DA27-DE9B-4BE7-8BA2-92044C21E4D5}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Source\ThirdParty\Itoo\forestitreesinterface.h">
 			<Filter>Source\ThirdParty\Itoo</Filter>
@@ -168,37 +168,37 @@
 			<Filter>Source\ThirdParty\Itoo</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\Editor\DatasmithCADImporter\Source">
-			<UniqueIdentifier>{15D5B87F-F3BA-4505-A74A-BD4A006D05CD}</UniqueIdentifier>
+			<UniqueIdentifier>{B83DB185-70E9-4D40-962A-8D293A9994CD}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Editor\DatasmithCADImporter\Source\DatasmithCADImporter">
-			<UniqueIdentifier>{BB6C5766-C1B4-469F-AA9F-AF54CD2A91F4}</UniqueIdentifier>
+			<UniqueIdentifier>{8F197658-6248-40E3-80F4-016D7B6D8643}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithCADImporter\Source\DatasmithCADImporter\DatasmithCADImporter.Build.cs">
 			<Filter>Plugins\Editor\DatasmithCADImporter\Source\DatasmithCADImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithDeltaGenImporter\Source">
-			<UniqueIdentifier>{15D39D8A-8A51-44D5-A39F-857F8DA35F42}</UniqueIdentifier>
+			<UniqueIdentifier>{7C6A95DD-D754-4B3A-9684-C3B28BA24DD4}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Editor\DatasmithDeltaGenImporter\Source\DatasmithDeltaGenImporter">
-			<UniqueIdentifier>{C8F492F6-72C5-434B-B26A-708EDE211313}</UniqueIdentifier>
+			<UniqueIdentifier>{C8F5DFD4-6AD6-4761-A86E-86CDC5A18060}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithDeltaGenImporter\Source\DatasmithDeltaGenImporter\DatasmithDeltaGenImporter.Build.cs">
 			<Filter>Plugins\Editor\DatasmithDeltaGenImporter\Source\DatasmithDeltaGenImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Editor\DatasmithImporter\Source">
-			<UniqueIdentifier>{AD1064CE-7533-4264-9444-F684BBCAE591}</UniqueIdentifier>
+			<UniqueIdentifier>{A1710C4C-9E25-4E92-86F2-A58649AE4FFD}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Editor\DatasmithImporter\Source\DatasmithImporter">
-			<UniqueIdentifier>{0357CC29-BE92-429E-A473-A8BAB10ACBF4}</UniqueIdentifier>
+			<UniqueIdentifier>{1433305C-C4A2-42F4-91AE-388A7F881511}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Editor\DatasmithImporter\Source\DatasmithImporter\DatasmithImporter.Build.cs">
 			<Filter>Plugins\Editor\DatasmithImporter\Source\DatasmithImporter</Filter>
 		</None >
 		<Filter Include="Plugins\Experimental\EditorScriptingUtilities\Source">
-			<UniqueIdentifier>{95F9287C-ACEF-4A64-B15D-40AC5BD201D4}</UniqueIdentifier>
+			<UniqueIdentifier>{C6724E96-4BF1-4362-A611-0B6E21837C58}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Experimental\EditorScriptingUtilities\Source\EditorScriptingUtilities">
-			<UniqueIdentifier>{EA23D1D5-0F23-4DB4-9D6E-4831D7284872}</UniqueIdentifier>
+			<UniqueIdentifier>{53A57A5D-060D-486F-BF17-0AF46379033B}</UniqueIdentifier>
 		</Filter>
 		<None Include="D:\Program Files\Epic Games\UE_4.19\Enterprise\Plugins\Experimental\EditorScriptingUtilities\Source\EditorScriptingUtilities\EditorScriptingUtilities.Build.cs">
 			<Filter>Plugins\Experimental\EditorScriptingUtilities\Source\EditorScriptingUtilities</Filter>

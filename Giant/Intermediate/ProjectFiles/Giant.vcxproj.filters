@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\Giant.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{C45EE0DF-7FB0-40D4-8046-08422910E80E}</UniqueIdentifier>
+			<UniqueIdentifier>{DC3EA4C0-460C-4863-9112-FEC1E54DC34C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Giant.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{4863D57C-C1D7-42A7-B21D-08CD4279BAE0}</UniqueIdentifier>
+			<UniqueIdentifier>{D8A4D39D-7B10-4F06-B4DB-AA2FE07C80C1}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -28,18 +28,36 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\Giant">
-			<UniqueIdentifier>{5D95F10D-0A9A-4FEF-BF3C-E93A6CAD8190}</UniqueIdentifier>
+			<UniqueIdentifier>{071F0CEE-A3DB-43E5-BF99-5EDA4C1AAE79}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\Giant\BTDecorator_IsInAttackRange.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\BTDecorator_IsInAttackRange.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\Giant\BTService_Detect.cpp">
 			<Filter>Source\Giant</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\Giant\BTService_Detect.h">
 			<Filter>Source\Giant</Filter>
 		</ClInclude >
+		<ClCompile Include="..\..\Source\Giant\BTTask_Attack.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\BTTask_Attack.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\Giant\BTTask_FindPatrolPos.cpp">
 			<Filter>Source\Giant</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\Giant\BTTask_FindPatrolPos.h">
+			<Filter>Source\Giant</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Giant\BTTask_TurnToTarget.cpp">
+			<Filter>Source\Giant</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Giant\BTTask_TurnToTarget.h">
 			<Filter>Source\Giant</Filter>
 		</ClInclude >
 		<ClCompile Include="..\..\Source\Giant\CharacterAnimInstance.cpp">

@@ -414,10 +414,16 @@
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
 		<None Include="..\..\Config\DefaultInput.ini" />
+		<ClCompile Include="..\..\Source\Giant\BTDecorator_IsInAttackRange.cpp" />
+		<ClInclude Include="..\..\Source\Giant\BTDecorator_IsInAttackRange.h" />
 		<ClCompile Include="..\..\Source\Giant\BTService_Detect.cpp" />
 		<ClInclude Include="..\..\Source\Giant\BTService_Detect.h" />
+		<ClCompile Include="..\..\Source\Giant\BTTask_Attack.cpp" />
+		<ClInclude Include="..\..\Source\Giant\BTTask_Attack.h" />
 		<ClCompile Include="..\..\Source\Giant\BTTask_FindPatrolPos.cpp" />
 		<ClInclude Include="..\..\Source\Giant\BTTask_FindPatrolPos.h" />
+		<ClCompile Include="..\..\Source\Giant\BTTask_TurnToTarget.cpp" />
+		<ClInclude Include="..\..\Source\Giant\BTTask_TurnToTarget.h" />
 		<ClCompile Include="..\..\Source\Giant\CharacterAnimInstance.cpp" />
 		<ClInclude Include="..\..\Source\Giant\CharacterAnimInstance.h" />
 		<None Include="..\..\Source\Giant\Giant.Build.cs" />

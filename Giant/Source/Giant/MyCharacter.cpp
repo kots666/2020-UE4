@@ -40,6 +40,7 @@ AMyCharacter::AMyCharacter()
 	// Attach Components & Init
 	Sword->SetupAttachment(GetMesh(), TEXT("RightHandSocket"));
 	Sword->SetRelativeLocation(FVector(0.0f, 0.0f, -30.0f));
+	Sword->SetCollisionProfileName(TEXT("NoCollision"));
 	
 	SwordCollision->SetupAttachment(Sword);
 	SwordCollision->SetRelativeLocation(FVector(0.0f, 0.0f, 75.0f));
